@@ -1,0 +1,12 @@
+echo 'deb https://download.arangodb.com/arangodb34/DEBIAN/ /'| sudo tee /etc/apt/sources.list.d/arangodb.list
+sudo echo 'deb https://download.arangodb.com/arangodb34/DEBIAN/ /'| sudo tee /etc/apt/sources.list.d/arangodb.list
+  apt update
+ sudo apt -y install apt-transport-https
+ sudo apt -y install arangodb3
+ systemctl start arangodb3
+ systemctl status arangodb3
+ arangosh
+ vim /etc/arangodb3/arangod.conf
+ systemctl status arangodb3
+ systemctl restart arangodb3
+ systemctl status arangodb3
